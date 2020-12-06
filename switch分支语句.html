@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 分支有第二种：switch-case
+    /*
+        switch(条件变量){
+            case 值1:
+                满足条件要执行的代码;
+                break;      // 结束分支
+            case 值2:
+                不满足条件值1，满足值2要执行的代码
+                break;
+            ...
+            default:
+                不满足前面所有条件（所有case，不论先后：习惯性写在后面）要执行的代码（相当于if分支的else）
+                break;      // 最后一个break可以省略（建议不要省略）
+        }
+
+
+    */
+    let a = +prompt('输入');
+    switch (a) {
+        case 1:
+            alert("周一！");
+            break;
+        case 2:
+            alert("周二!");
+            break;
+        case 3:
+            alert("周三");
+            break;
+        case 4:
+            alert("周四");
+            break;
+        default:
+            alert("周五,放假了");
+            break;
+    }
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 构造函数：本质就是函数
+
+
+    // 构造函数的出现：是因为JS早期没有真正引入核心的面向对象思想对应的编程方式（没有类）
+    // 作者灵机一动：函数正常的时候，就是函数，特殊的时候可以用来产生对象（构造函数）
+
+
+    // 构造函数的用法与普通函数不同
+
+
+    /*
+        定义构造函数
+        function 构造函数名字(形参列表){
+            // 函数体
+        }
+        区别1：构造函数名字是大驼峰法（首字母大写）
+        区别2：会在函数体中直接使用this（this就代表对象自己）
+        区别3：构造函数通常不需要给返回值：默认有返回值，是一个对象
+
+
+        调用构造函数
+        new 构造函数名字(实参列表)
+    
+    */
+    function Student(stuNo, stuName, stuAge) {
+        this.stuNo = stuNo;
+        this.stuName = stuName;
+        this.stuAge = stuAge;
+        // console.log(stuAge);
+    }
+    let s1 = new Student('01', '地红', '18');
+    let s2 = new Student('02', '红红', '19');
+    console.log(s1, s2);
+</script>
+
+</html>

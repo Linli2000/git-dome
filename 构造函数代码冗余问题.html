@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 如果我们在构造函数中给属性增加方法：会导致每个对象，都会保存一份方法
+    // 解决方案：将方法，单独存储一份，让对象中的属性指向方法（方法也是一种复合数据类型：存储在堆里面）
+    // 构造函数对象方法：在构造函数中，有自己的方法（函数）
+    function Student(name, age) {
+        this.name = name;
+        this.age = age;
+        // 添加对象方法
+        this.study = study;
+
+    }
+    // 定义一个函数
+    function study() {
+        console.log(this.name + '在学习');
+    }
+
+    let s1 = new Student('小林', 16);
+    // console.log(s1.study());
+    s1.study();
+    let s2 = new Student('小路', 12)
+    s2.study();
+
+    console.log(s1.study === s2.study);
+
+</script>
+
+</html>
